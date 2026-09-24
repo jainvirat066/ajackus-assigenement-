@@ -27,6 +27,7 @@ def query_knowledge(
     # knowledge chunks.
     results = (
         db.query(KnowledgeChunk)
+        .filter(KnowledgeChunk.club_id == club_id)
         .order_by(KnowledgeChunk.embedding.cosine_distance(query_vec))
         .limit(5)
         .all()
