@@ -8461,4 +8461,72 @@ no changes added to commit (use "git add" and/or "git commit -a")
   2:    unchanged      +189/-1 [1;34mT[mERMINAL_LOG.raw
   3:    unchanged        +1/-1 [1;34ma[mpp/config.py
   4:    unchanged        +1/-1 [1;34mt[mests/conftest.py
+[1;34mUpdate[m>> 3-  2-4
+[1m           staged     unstaged path[m
+  1:    unchanged        +1/-1 [1;34m.[menv.example
+* 2:    unchanged      +189/-1 [1;34mT[mERMINAL_LOG.raw
+* 3:    unchanged        +1/-1 [1;34ma[mpp/config.py
+* 4:    unchanged        +1/-1 [1;34mt[mests/conftest.py
 [1;34mUpdate[m>> 
+updated 3 paths
+
+[1m*** Commands ***[m
+  1: [1;34ms[mtatus	  2: [1;34mu[mpdate	  3: [1;34mr[mevert	  4: [1;34ma[mdd untracked
+  5: [1;34mp[match	  6: [1;34md[miff	  7: [1;34mq[muit	  8: [1;34mh[melp
+[1;34mWhat now[m> 4
+[1m           staged     unstaged path[m
+  1: -
+  2: [1;34m.[mspecstory/history/2026-09-24_18-08-41Z-terminal-file-reference.md
+[1;34mAdd untracked[m>> 7
+[1;31mHuh (7)?[m
+[1m           staged     unstaged path[m
+  1: -
+  2: [1;34m.[mspecstory/history/2026-09-24_18-08-41Z-terminal-file-reference.md
+[1;34mAdd untracked[m>> 
+
+[1m*** Commands ***[m
+  1: [1;34ms[mtatus	  2: [1;34mu[mpdate	  3: [1;34mr[mevert	  4: [1;34ma[mdd untracked
+  5: [1;34mp[match	  6: [1;34md[miff	  7: [1;34mq[muit	  8: [1;34mh[melp
+[1;34mWhat now[m> 7
+Bye.
+[1m[7m%[27m[1m[0m                                                                                                                                                                               [0m[27m[24m[Jmayankjain@Mayank-ka-Mac-mini attachai-ai-ml-eng % [K[?2004hggit status[?2004l
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mmodified:   TERMINAL_LOG.raw[m
+	[32mmodified:   app/config.py[m
+	[32mmodified:   tests/conftest.py[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   .env.example[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m-[m
+	[31m.specstory/history/2026-09-24_18-08-41Z-terminal-file-reference.md[m
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                               [0m[27m[24m[Jmayankjain@Mayank-ka-Mac-mini attachai-ai-ml-eng % [K[?2004hggit commit -m ""f"i"x" "" (")"t)"e)"s)"t)"s)"[1C:" "u"s"e" "p"y"" s"y"c"o"p"g"3" "d"r"i"v"e"r" "i"n" "t"e"s"t" "d"b" "u"r"l" "c"h"a"n"g"e"d" "p"r"" o"r"t" "a"l"o"" s"o"[?2004l
+[main a4fde3e] fix(tests): use psycopg3 driver in test db url changed port also
+ 3 files changed, 225 insertions(+), 3 deletions(-)
+[1m[7m%[27m[1m[0m                                                                                                                                                                               [0m[27m[24m[Jmayankjain@Mayank-ka-Mac-mini attachai-ai-ml-eng % [K[?2004hggit p  g  ggit status[?2004l
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   .env.example[m
+	[31mmodified:   TERMINAL_LOG.raw[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m-[m
+	[31m.specstory/history/2026-09-24_18-08-41Z-terminal-file-reference.md[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[1m[7m%[27m[1m[0m                                                                                                                                                                               [0m[27m[24m[Jmayankjain@Mayank-ka-Mac-mini attachai-ai-ml-eng % [K[?2004h

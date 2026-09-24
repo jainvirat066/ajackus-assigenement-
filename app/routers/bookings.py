@@ -26,6 +26,9 @@ def confirm_payment(
         raise HTTPException(status_code=404, detail="booking not found")
 
     try:
+        #TODO: Check if the amount is valid amount for the booking
+        if payload.amount_cents != booking.amount_cents:
+            raise HTTPException(status_code=400, detail="amount does not match the booking")
         result = payment_mock_client.charge(payload.amount_cents)
     except PaymentTimeoutError:
         raise HTTPException(status_code=504, detail="payment provider timed out")
