@@ -1,0 +1,31 @@
+---
+description: Kindred Concierge stack, data constraints, and working style
+alwaysApply: true
+---
+
+# Kindred Concierge
+
+## Stack
+FastAPI 0.115, Uvicorn, SQLAlchemy 2.0, PostgreSQL (psycopg 3, pgvector), Pydantic Settings, python-dotenv. Tests use pytest and httpx. Settings live in `app/config.py` and load from `.env`. Run with `uvicorn app.main:app`.
+
+## Hard constraints
+- Do not add tables, columns, or migrations. Use `app/models.py` as-is.
+- Do not modify `scripts/seed.py` or any seed data.
+- Scope every member-data query to the caller's club. Filter on `club_id` for members, attributes, messages, knowledge, bookings, and sessions.
+
+```python
+db.query(Member).filter(Member.club_id == member.club_id, Member.id != member.id)
+```
+
+## Coding style
+Match the existing code:
+- Sync routes on `APIRouter(prefix=..., tags=[...])`. Request bodies are Pydantic `BaseModel`s named `*In`. Responses are plain dicts.
+- DB access via `Depends(get_db)` and `db.query(Model).filter(...).first()` / `.all()`.
+- Auth via `Depends(get_current_member)` (`X-Member-Token`). Failures are `HTTPException(status_code, detail="...")`.
+- Put logic in `app/services/`; keep routers thin. Use snake_case and type hints.
+
+## How to work
+- Explain the root cause before changing code.
+- Before a multi-file edit, show the plan and the intended diff and wait for a go-ahead.
+- Keep each change small.
+- Never hardcode secrets, tokens, or API keys. Read them from `settings` or the environment.
